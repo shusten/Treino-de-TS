@@ -11,8 +11,8 @@ class Personagem {
 }
 
 
-let luis: Personagem;
-let grazi: Personagem;
+let luis: Personagem = new Personagem('Luis', 50, 100, 10, 20);
+let grazi: Personagem = new Personagem('Grazi', 90, 40, 80, 70);
 
 let keyboard = prompt();
 let option: number = 0;
@@ -25,19 +25,20 @@ while (option != 9) {
     console.log("|9. Sair                               |");
     console.log("+======================================+");
 
-    option = +keyboard("Escolha uma opção");
+    option = +keyboard("Escolha uma apção: ");
 
     switch (option) {
         case 1:
             luis.ataque += 2;
             break;
-    
+        case 3:
+            console.log("Luis :>> ", luis);
+            break;
         default:
             break;
     }
 }
 
-luis = new Personagem('Luis', 50, 100, 10, 20);
-grazi = new Personagem('Grazi', 90, 40, 80, 70);
+
 
 
