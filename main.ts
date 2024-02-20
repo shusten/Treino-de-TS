@@ -23,13 +23,30 @@ while (option != 9) {
         case 1:
             person.ataque += Math.random() * 7;
             person.energia -= Math.random() * 10;
+            if (person.energia < 0) {
+                console.log('Ops! Você morreu!');
+            } else {
+                if(person.defesa > 100) {
+                    person.defesa = 0;
+                }
+            }
             break;
         case 2:
             person.defesa += Math.random() * 5;
             person.energia -= Math.random() * 10;
+            if (person.energia < 0) {
+                console.log('Ops! Você morreu!');
+            } else {
+                if(person.defesa > 100) {
+                    person.defesa = 0;
+                }
+            }
             break;
         case 3:
             person.energia += Math.random() * 10;
+            if (person.energia > 100) {
+              person.energia = 100;
+            } 
             break;
         case 4:
             person.energia -= Math.random() * 100;
