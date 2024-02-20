@@ -55,7 +55,11 @@ while (option != 9) {
             }
             break;
         case 8:
-            console.log("Person :>> ", person);
+            console.log("Guerreiro: ");
+            console.log("Nome: ", person.nome);
+            console.log("Energia: ", person.energia.toFixed(1));
+            console.log("Ataque: ", person.ataque.toFixed(1));
+            console.log("Defesa: ", person.defesa.toFixed(1));
             break;
         default:
         break;
