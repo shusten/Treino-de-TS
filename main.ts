@@ -30,6 +30,7 @@ while (option != 9) {
                     person.defesa = 0;
                 }
             }
+            person.stauts();
             break;
         case 2:
             person.defesa += Math.random() * 5;
@@ -41,25 +42,24 @@ while (option != 9) {
                     person.defesa = 0;
                 }
             }
+            person.stauts();
             break;
         case 3:
             person.energia += Math.random() * 10;
             if (person.energia > 100) {
               person.energia = 100;
             } 
+            person.stauts();
             break;
         case 4:
             person.energia -= Math.random() * 100;
             if (person.energia < 0) {
                 console.log('Ops! Você morreu!');
             }
+            person.stauts();
             break;
         case 8:
-            console.log("Guerreiro: ");
-            console.log("Nome: ", person.nome);
-            console.log("Energia: ", person.energia.toFixed(1));
-            console.log("Ataque: ", person.ataque.toFixed(1));
-            console.log("Defesa: ", person.defesa.toFixed(1));
+            person.stauts();
             break;
         default:
         break;
