@@ -15,8 +15,20 @@ export default class Personagem {
         console.log("Defesa: ", this.defesa.toFixed(1));
     }
 
-    atacar(): void {
+    treinarAtaque(): void {
         this.ataque += Math.random() * 7;
+        this.energia -= Math.random() * 10;
+        if (this.energia < 0) {
+            console.log('Ops! Você morreu!');
+        } else {
+            if(this.defesa > 100) {
+                this.defesa = 0;
+            }
+        }
+    }
+
+    treinarDefesa():void {
+        this.defesa += Math.random() * 5;
         this.energia -= Math.random() * 10;
         if (this.energia < 0) {
             console.log('Ops! Você morreu!');

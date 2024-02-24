@@ -21,19 +21,11 @@ while (option != 9) {
 
     switch (option) {
         case 1:
-            person.atacar();
+            person.treinarAtaque();
             person.stauts();
             break;
         case 2:
-            person.defesa += Math.random() * 5;
-            person.energia -= Math.random() * 10;
-            if (person.energia < 0) {
-                console.log('Ops! Você morreu!');
-            } else {
-                if(person.defesa > 100) {
-                    person.defesa = 0;
-                }
-            }
+            person.treinarDefesa();
             person.stauts();
             break;
         case 3:
