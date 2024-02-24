@@ -29,17 +29,11 @@ while (option != 9) {
             person.stauts();
             break;
         case 3:
-            person.energia += Math.random() * 10;
-            if (person.energia > 100) {
-              person.energia = 100;
-            } 
+            person.descansar();
             person.stauts();
             break;
         case 4:
-            person.energia -= Math.random() * 100;
-            if (person.energia < 0) {
-                console.log('Ops! Você morreu!');
-            }
+            person.batalhar();
             person.stauts();
             break;
         case 8:

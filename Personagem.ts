@@ -7,7 +7,7 @@ export default class Personagem {
         public defesa: number,
     ) {}
 
-    stauts(): void {
+    stauts(): void{
         console.log("Guerreiro: ");
         console.log("Nome: ", this.nome);
         console.log("Energia: ", this.energia.toFixed(1));
@@ -27,7 +27,7 @@ export default class Personagem {
         }
     }
 
-    treinarDefesa():void {
+    treinarDefesa(): void{
         this.defesa += Math.random() * 5;
         this.energia -= Math.random() * 10;
         if (this.energia < 0) {
@@ -36,6 +36,20 @@ export default class Personagem {
             if(this.defesa > 100) {
                 this.defesa = 0;
             }
+        }
+    }
+
+    descansar(): void{
+        this.energia += Math.random() * 10;
+        if (this.energia > 100) {
+            this.energia = 100;
+        } 
+    }
+
+    batalhar(): void {
+        this.energia -= Math.random() * 100;
+        if (this.energia < 0) {
+            console.log('Ops! Você morreu!');
         }
     }
 }
