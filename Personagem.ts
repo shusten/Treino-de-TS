@@ -7,6 +7,9 @@ export default class Personagem {
         public defesa: number,
     ) {}
 
+    // SEMPRE QUE PENSAR EM LER DADOS NA CLASSE - USE PARÂMETRO
+    // SEMPRE QUE PENSAR EM IMPRIMIR NA CLASSE - USE RETORNO
+
     stauts(): void{
         console.log("Guerreiro: ");
         console.log("Nome: ", this.nome);
@@ -38,8 +41,10 @@ export default class Personagem {
         } 
     }
 
-    batalhar(): void {
-        this.energia -= Math.random() * 100;
+    batalhar(): number {
+        let desgaste : number = Math.random() * 100;
+        this.energia -= desgaste;
+        return this.energia;
     }
 
     isDead(): boolean {

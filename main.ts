@@ -33,7 +33,8 @@ while (option != 9 || person.isDead()) {
             person.stauts();
             break;
         case 4:
-            person.batalhar();
+           let rest: number = person.batalhar();
+           console.log(`Esta batalha custou ${rest} de energia`);
             person.stauts();
             break;
         case 8:
