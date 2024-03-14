@@ -7,7 +7,7 @@ let person: Personagem = new Personagem('Personagem', 50, 100, 10, 20);
 let keyboard = prompt();
 let option: number = 0;
 
-while (option != 9) {
+while (option != 9 || person.isDead()) {
     console.log("+==============Personagem==============+");
     console.log("|1. Treinar ataque                     |");
     console.log("|2. Treinar defesa                     |");
