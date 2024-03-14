@@ -10,12 +10,15 @@ export default class Personagem {
     // SEMPRE QUE PENSAR EM LER DADOS NA CLASSE - USE PARÂMETRO
     // SEMPRE QUE PENSAR EM IMPRIMIR NA CLASSE - USE RETORNO
 
-    stauts(): void{
-        console.log("Guerreiro: ");
-        console.log("Nome: ", this.nome);
-        console.log("Energia: ", this.energia.toFixed(1));
-        console.log("Ataque: ", this.ataque.toFixed(1));
-        console.log("Defesa: ", this.defesa.toFixed(1));
+    status(): string {
+        return (
+        "Guerreiro: \n" + 
+        "\nNome: " +
+        this.nome + 
+        ("\nEnergia: " + this.energia.toFixed(1)) +
+        ("\nAtaque: " + this.ataque.toFixed(1)) +
+        ("\nDefesa: " + this.defesa.toFixed(1))
+        );
     }
 
     treinarAtaque(): void {
@@ -49,7 +52,6 @@ export default class Personagem {
 
     isDead(): boolean {
         if (this.energia < 0) {
-            console.log('Ops! Você morreu!');
             return true;
         } else {
             return false;

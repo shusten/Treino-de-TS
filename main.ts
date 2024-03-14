@@ -22,25 +22,27 @@ while (option != 9 || person.isDead()) {
     switch (option) {
         case 1:
             person.treinarAtaque();
-            person.stauts();
+            console.log(person.status());
             break;
         case 2:
             person.treinarDefesa();
-            person.stauts();
+            console.log(person.status());
             break;
         case 3:
             person.descansar();
-            person.stauts();
+            console.log(person.status());
             break;
         case 4:
            let rest: number = person.batalhar();
            console.log(`Esta batalha custou ${rest} de energia`);
-            person.stauts();
+           console.log(person.status());
             break;
         case 8:
-            person.stauts();
+            console.log(person.status());
             break;
         default:
         break;
     }
 }
+console.log("Ops! Morreu!");
+
