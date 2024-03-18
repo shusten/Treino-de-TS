@@ -29,7 +29,8 @@ while (option != 9 || person.isDead()) {
             console.log(person.status());
             break;
         case 3:
-            person.descansar();
+            let horas: number = +keyboard('Digite o número de horas: ');
+            person.descansar(horas);
             console.log(person.status());
             break;
         case 4:

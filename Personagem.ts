@@ -37,8 +37,8 @@ export default class Personagem {
         }
     }
 
-    descansar(): void{
-        this.energia += Math.random() * 10;
+    descansar(hora: number): void{
+        this.energia += hora * Math.random() * 10;
         if (this.energia > 100) {
             this.energia = 100;
         } 
