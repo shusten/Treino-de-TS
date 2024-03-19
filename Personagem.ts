@@ -50,7 +50,11 @@ export default class Personagem {
         return this.energia;
     }
 
-    isDead(): boolean {
+    public isDead(): boolean {
         return this.energia < 0;
+    }
+
+    randomizar(fator: number): number {
+        return Math.random() * fator;
     }
 }
