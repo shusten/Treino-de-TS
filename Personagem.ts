@@ -22,30 +22,30 @@ export default class Personagem {
     }
 
     public treinarAtaque(): void {
-        this.ataque += Math.random() * 7;
-        this.energia -= Math.random() * 10;
+        this.ataque += this.randomizar(7);
+        this.energia -= this.randomizar(10);
         if(this.defesa > 100) {
             this.defesa = 0;
         }
     }
 
     public treinarDefesa(): void{
-        this.defesa += Math.random() * 5;
-        this.energia -= Math.random() * 10;
+        this.defesa += this.randomizar(5);
+        this.energia -= this.randomizar(10);
         if(this.defesa > 100) {
             this.defesa = 0;
         }
     }
 
     public descansar(hora: number): void{
-        this.energia += hora * Math.random() * 10;
+        this.energia += hora * this.randomizar(10);
         if (this.energia > 100) {
             this.energia = 100;
         } 
     }
 
     public batalhar(): number {
-        let desgaste : number = Math.random() * 100;
+        let desgaste : number = this.randomizar(10);
         this.energia -= desgaste;
         return this.energia;
     }
