@@ -1,6 +1,6 @@
 export default class Personagem {   
     constructor(
-        public nome: string,
+        public _nome: string,
         public energia: number,
         public vida: number,
         public ataque: number,
@@ -10,11 +10,17 @@ export default class Personagem {
     // SEMPRE QUE PENSAR EM LER DADOS NA CLASSE - USE PARÂMETRO
     // SEMPRE QUE PENSAR EM IMPRIMIR NA CLASSE - USE RETORNO
 
+    
+    public get nome() : string {
+        return this._nome;
+    }
+    
+
     public status(): string {
         return (
         "Guerreiro: \n" + 
         "\nNome: " +
-        this.nome + 
+        this._nome + 
         ("\nEnergia: " + this.energia.toFixed(1)) +
         ("\nAtaque: " + this.ataque.toFixed(1)) +
         ("\nDefesa: " + this.defesa.toFixed(1))
