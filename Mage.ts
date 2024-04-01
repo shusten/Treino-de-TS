@@ -1,15 +1,13 @@
 import { Util } from "./Util";
+import { Personagem } from './Personagem';
 
-class Mage {
-    private _nome: string;
-    private _armadura: number;
-    private _vidaMaxima: number;
-    private _vidaAtual: number;
+class Mage extends Personagem {
+   
     private _intelecto: number;
     private _velocidade: number;
 
     constructor(nome: string) {
-        this._nome = nome;
+        super(nome);
         this._armadura = Util.randomizar(100, 1_000);
         this._vidaMaxima = Util.randomizar(200, 1_000);
         this._vidaAtual = Util.randomizar(40, this._vidaMaxima);
