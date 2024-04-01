@@ -1,49 +1,7 @@
-import Personagem from "./Personagem";
-import prompt from "prompt-sync";
+import { Mage } from "./Mage";
+import { Warrior } from './Warrior';
+import { Priest } from './Priest';
 
-let person: Personagem = new Personagem('Personagem', 50, 100, 10, 20);
-/* let grazi: Personagem = new Personagem('Grazi', 90, 40, 80, 70); */
-
-let keyboard = prompt();
-let option: number = 0;
-
-while (option != 9 || person.isDead()) {
-    console.log(`+==============Personagem ${person.nome}========+`);
-    console.log("|1. Treinar ataque                     |");
-    console.log("|2. Treinar defesa                     |");
-    console.log("|3. Descansar                          |");
-    console.log("|4. Entrar em batalha                  |");
-    console.log("|8. Imprimir atributos                 |");
-    console.log("|9. Sair                               |");
-    console.log("+======================================+");
-
-    option = +keyboard("Escolha uma apção: ");
-
-    switch (option) {
-        case 1:
-            person.treinarAtaque();
-            console.log(person.status());
-            break;
-        case 2:
-            person.treinarDefesa();
-            console.log(person.status());
-            break;
-        case 3:
-            let horas: number = +keyboard('Digite o número de horas: ');
-            person.descansar(horas);
-            console.log(person.status());
-            break;
-        case 4:
-           let rest: number = person.batalhar();
-           console.log(`Esta batalha custou ${rest} de energia`);
-           console.log(person.status());
-            break;
-        case 8:
-            console.log(person.status());
-            break;
-        default:
-        break;
-    }
-}
-console.log("Ops! Morreu!");
-
+let mage: Mage = new Mage("Luis mage");
+let priest: Priest = new Priest("Covra Pries");
+let warrior: Warrior = new Warrior("Carlos warriror");

@@ -1,7 +1,7 @@
 import { Personagem } from './Personagem';
 import { Util } from "./Util";
 
-class Warrior extends Personagem{
+export class Warrior extends Personagem{
     private _forca: number;
     private _agilidade: number;
 

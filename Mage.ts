@@ -1,7 +1,7 @@
 import { Util } from "./Util";
 import { Personagem } from './Personagem';
 
-class Mage extends Personagem {
+export class Mage extends Personagem {
    
     private _intelecto: number;
     private _velocidade: number;

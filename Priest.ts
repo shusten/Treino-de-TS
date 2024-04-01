@@ -1,7 +1,7 @@
 import { Util } from "./Util";
 import { Personagem } from './Personagem';
 
-class Priest extends Personagem {
+export class Priest extends Personagem {
    
     private _espirito: number;
     private _versatilidade: number;
