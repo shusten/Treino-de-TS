@@ -11,6 +11,5 @@ personagens.push(mage);
 personagens.push(priest);
 
 personagens.forEach((p) => 
-    console.log(p instanceof Mage? p.atacar: (p as Priest).atacar())
-    
+    console.log(p instanceof Mage ? p.atacar() : (p as Priest).atacar())
 );
